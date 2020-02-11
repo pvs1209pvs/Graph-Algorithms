@@ -38,6 +38,10 @@ class AdjacencyList(private val numVertices: Int = 0) : Graph {
         graph[to].add(vertices[from])
     }
 
+    override fun isSink(): Int {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
     override fun toString(): String {
 
         val toString = StringBuilder()

@@ -1,5 +1,6 @@
 package demo
 
+import AdjacentMatrix
 import java.util.*
 
 
@@ -17,22 +18,21 @@ fun main() {
 
 
 
-    var myGraph = AdjacencyList(6)
+    val myGraph = AdjacentMatrix(4)
 
     myGraph.insetEdge(0,1)
+    myGraph.insetEdge(0,2)
+    myGraph.insetEdge(0,3)
 
+    myGraph.insetEdge(1,0)
     myGraph.insetEdge(1,2)
+    myGraph.insetEdge(1,3)
+
+    myGraph.insetEdge(3,0)
+    myGraph.insetEdge(3,2)
 
 
-    myGraph.insetEdge(2,3)
-    myGraph.insetEdge(2,4)
-    myGraph.insetEdge(2,5)
-
-    myGraph.insetEdge(4,5)
-
-    myGraph.dfs(0)
-
-    println(myGraph)
+    println(myGraph.isSink())
 
 
 

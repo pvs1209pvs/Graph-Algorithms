@@ -12,4 +12,9 @@ interface Graph {
      */
     fun dfs(graph:Graph, startingVertex:Int, vertices:List<Vertex>)
 
+    /**
+     * Returns the vertex which is a sink else -1.
+     */
+    fun isSink():Int
+
 }
