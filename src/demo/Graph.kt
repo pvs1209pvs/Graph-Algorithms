@@ -1,8 +1,8 @@
 package demo
 
+import java.io.DataInputStream
 import java.io.File
 import java.io.FileInputStream
-import java.io.InputStream
 
 interface Graph {
 
@@ -28,6 +28,36 @@ interface Graph {
      * Checks if the graph has a sink.
      * @return the sink vertex.
      */
-    fun isSink():Int
+    fun isSink(): Int
 
+    fun initGraph(numV:Int)
+
+    fun createGraph(input: String){
+        val inputStreamReader = DataInputStream(FileInputStream(File(input)))
+
+        val n = inputStreamReader.read().toChar().toString().toInt()
+
+        initGraph(n)
+
+        var from = -1
+        var to = 0
+
+        while (inputStreamReader.available() > 0) {
+
+            val read = inputStreamReader.read().toChar()
+
+            if (read == '\n') {
+                from++
+                to=-1
+            }
+
+            if(read == '0') to++
+
+            if (read == '1') {
+                to++
+                insetEdge(from, to)
+            }
+
+        }
+    }
 }

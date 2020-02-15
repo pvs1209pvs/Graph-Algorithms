@@ -46,8 +46,12 @@ class AdjacentMatrix(private val numVertices: Int = 0) : Graph {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-     fun createGraph(input: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//     fun createGraph(input: String) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//    }
+
+    override fun initGraph(numV: Int) {
+        TODO("not implemented yet")
     }
 
     override fun toString():String{

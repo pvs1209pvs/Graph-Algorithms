@@ -1,16 +1,19 @@
 package demo
 
+import java.io.DataInputStream
+import java.io.File
+import java.io.FileInputStream
+
 var count: Int = 0
 
 // TODO read graph from file
 
 fun main() {
 
-    val myGraph = AdjacencyList("/home/param/Desktop/Kotlin-Projects/Graph-Algorithms/src/demo/graph.txt")
-
+    val myGraph = AdjacentMatrix(
+        "/home/param/Desktop/Kotlin-Projects/Graph-Algorithms/src/demo/graph.txt")
+    println(myGraph.vertices)
     println(myGraph)
-
-
 
 //    val arr:Array<Int> = Array(5){0}
 //    arr[0] = 10
