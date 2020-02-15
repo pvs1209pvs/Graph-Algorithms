@@ -1,49 +1,46 @@
 package demo
 
-import java.lang.System.exit
-
 var count: Int = 0
 
-/*
-0,1
-1,2
-2,3
-3,4
-4,5
- */
+// TODO read graph from file
 
 fun main() {
 
-
-    val arr:Array<Int> = Array(5){0}
-    arr[0] = 10
-    arr[1] = 10
-    arr[2] = 10
-    arr[3] = 10
-    println(arr.contentToString())
-    exit(0)
-
-    val myGraph = AdjacencyList(6)
-
-    //a=0, b=1, c=2, d=3, e=4, f=5, g=6, h=7
-
-    myGraph.insetEdge(0, 1)
-    myGraph.insetEdge(0, 2)
-
-    myGraph.insetEdge(1, 3)
-
-    // c->f,g
-    myGraph.insetEdge(2, 3)
-    myGraph.insetEdge(2, 4)
-
-    // e->h
-    myGraph.insetEdge(3, 5)
+    val myGraph = AdjacencyList("/home/param/Desktop/Kotlin-Projects/Graph-Algorithms/src/demo/graph.txt")
 
     println(myGraph)
 
-    myGraph.bfs(0, myGraph.vertices)
 
-    println(myGraph.vertices)
+
+//    val arr:Array<Int> = Array(5){0}
+//    arr[0] = 10
+//    arr[1] = 10
+//    arr[2] = 10
+//    arr[3] = 10
+//    println(arr.contentToString())
+//    exit(0)
+//
+//
+//
+//    //a=0, b=1, c=2, d=3, e=4, f=5, g=6, h=7
+//
+//    myGraph.insetEdge(0, 1)
+//    myGraph.insetEdge(0, 2)
+//
+//    myGraph.insetEdge(1, 3)
+//
+//    // c->f,g
+//    myGraph.insetEdge(2, 3)
+//    myGraph.insetEdge(2, 4)
+//
+//    // e->h
+//    myGraph.insetEdge(3, 5)
+//
+//    println(myGraph)
+//
+//    myGraph.bfs(0, myGraph.vertices)
+//
+//    println(myGraph.vertices)
 
 
 }

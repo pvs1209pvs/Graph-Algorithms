@@ -1,5 +1,6 @@
 package demo
 
+import java.io.FileInputStream
 import java.util.*
 
 class AdjacencyList(private val numVertices: Int = 0) : Graph {
@@ -15,11 +16,16 @@ class AdjacencyList(private val numVertices: Int = 0) : Graph {
         }
     }
 
+
+    constructor(input: String) : this() {
+        createGraph(input)
+    }
+
     override fun dfs(startingVertex: Int) {
         dfs(this, startingVertex, vertices)
     }
 
-    private fun dfs(graph:Graph, startingVertex: Int, vertices: List<Vertex>) {
+    private fun dfs(graph: Graph, startingVertex: Int, vertices: List<Vertex>) {
 
         vertices[startingVertex].isVisited = true
 
@@ -74,6 +80,44 @@ class AdjacencyList(private val numVertices: Int = 0) : Graph {
 
     override fun isSink(): Int {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    private fun createGraph(input: String) {
+
+        println("hi")
+
+        val inputStreamReader = FileInputStream(input)
+
+        val n = inputStreamReader.read().toChar().toString().toInt()
+
+        for (i in 0 until n) {
+            graph.add(LinkedList())
+            vertices.add(Vertex(i))
+        }
+
+        var v = -1
+        var c = 0
+
+        while (inputStreamReader.available() > 0) {
+
+            val read = inputStreamReader.read().toChar()
+
+            if (read == '\n') {
+                v++
+                c=-1
+            }
+
+            if(read == '0') c++
+
+            if (read == '1') {
+                c++
+                graph[v].add(vertices[c])
+            }
+
+
+        }
+
+
     }
 
     override fun toString(): String {

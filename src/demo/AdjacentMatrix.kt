@@ -1,5 +1,7 @@
 package demo
 
+import java.io.InputStream
+
 class AdjacentMatrix(private val numVertices: Int = 0) : Graph {
 
     private val adjacentMatrix: Array<Array<Int>> = Array(numVertices) { Array(numVertices) { 0 } }
@@ -41,6 +43,10 @@ class AdjacentMatrix(private val numVertices: Int = 0) : Graph {
     }
 
     override fun bfs(s: Int, vertices: List<Vertex>) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+     fun createGraph(input: String) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
