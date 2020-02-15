@@ -1,10 +1,8 @@
-import demo.Graph
-import demo.Vertex
+package demo
 
 class AdjacentMatrix(private val numVertices: Int = 0) : Graph {
 
     private val adjacentMatrix: Array<Array<Int>> = Array(numVertices) { Array(numVertices) { 0 } }
-
 
     override fun isSink(): Int {
 
@@ -38,7 +36,11 @@ class AdjacentMatrix(private val numVertices: Int = 0) : Graph {
         adjacentMatrix[from][to] = 1
     }
 
-    override fun dfs(graph: Graph, startingVertex: Int, vertices: List<Vertex>) {
+    override fun dfs(startingVertex: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun bfs(s: Int, vertices: List<Vertex>) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
