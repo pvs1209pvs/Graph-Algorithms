@@ -30,9 +30,9 @@ interface Graph {
      */
     fun isSink(): Int
 
-    fun initGraph(numV:Int)
+    fun initGraph(numV: Int)
 
-    fun createGraph(input: String){
+    fun createGraph(input: String) {
         val inputStreamReader = DataInputStream(FileInputStream(File(input)))
 
         val n = inputStreamReader.read().toChar().toString().toInt()
@@ -48,10 +48,10 @@ interface Graph {
 
             if (read == '\n') {
                 from++
-                to=-1
+                to = -1
             }
 
-            if(read == '0') to++
+            if (read == '0') to++
 
             if (read == '1') {
                 to++

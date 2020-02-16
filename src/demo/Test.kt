@@ -12,7 +12,7 @@ fun main() {
 
     val myGraph = AdjacentMatrix(
         "/home/param/Desktop/Kotlin-Projects/Graph-Algorithms/src/demo/graph.txt")
-    println(myGraph.vertices)
+
     println(myGraph)
 
 //    val arr:Array<Int> = Array(5){0}

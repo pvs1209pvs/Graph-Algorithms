@@ -1,17 +1,23 @@
 package demo
 
 import java.io.InputStream
+import java.util.*
 
-class AdjacentMatrix(private val numVertices: Int = 0) : Graph {
+class AdjacentMatrix(input:String) : Graph {
 
-    private val adjacentMatrix: Array<Array<Int>> = Array(numVertices) { Array(numVertices) { 0 } }
+    private var adjacentMatrix: Array<Array<Int>> = Array(0) { Array(0) { 0 } }
+    private val vertices = LinkedList<Vertex>()
+
+    init{
+        createGraph(input)
+    }
 
     override fun isSink(): Int {
 
         var i = 0
         var j = 1
 
-        while (j < numVertices) {
+        while (j < vertices.size) {
             if (adjacentMatrix[i][j] == 1) {
                 i++
             } else if (adjacentMatrix[i][j] == 0) {
@@ -51,7 +57,10 @@ class AdjacentMatrix(private val numVertices: Int = 0) : Graph {
 //    }
 
     override fun initGraph(numV: Int) {
-        TODO("not implemented yet")
+       for  (i in 0 until numV){
+           vertices.add(Vertex(i))
+           adjacentMatrix = Array(numV) { Array(numV) { 0 } }
+       }
     }
 
     override fun toString():String{
