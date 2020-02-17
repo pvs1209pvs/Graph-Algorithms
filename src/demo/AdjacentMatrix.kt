@@ -115,16 +115,16 @@ class AdjacentMatrix(input: String) : Graph {
 
     override fun toString(): String {
 
-        val toString = StringBuilder()
+        val stringForm = StringBuilder()
 
-        for (r: Array<Int> in adjacentMatrix) {
-            for (c: Int in r) {
-                toString.append("$c ")
+        for (r in adjacentMatrix) {
+            for (c in r) {
+                stringForm.append("$c\t")
             }
-            toString.append('\n')
+            stringForm.append('\n')
         }
 
-        return toString.toString()
+        return stringForm.toString()
 
     }
 }

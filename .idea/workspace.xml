@@ -32,20 +32,8 @@
       <change beforePath="$PROJECT_DIR$/../../Java/GettingAround/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Java/GettingAround/input.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Java/JavaFX/JavaFX.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/AdjacencyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/AdjacentMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/AdjacentMatrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/Graph$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/Graph$DefaultImpls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/TestKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/TestKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graph-Algorithms/demo/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/AdjacencyList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/AdjacencyList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/AdjacentMatrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/AdjacentMatrix.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/Graph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Graph.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/demo/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Test.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/Vertex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/Vertex.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/demo/graph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/graph.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hackerrank/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hackerrank/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hackerrank/.idea/kotlinc.xml" beforeDir="false" />
@@ -99,11 +87,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/demo/Test.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="231">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -111,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/demo/AdjacentMatrix.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+            <state relative-caret-position="257">
+              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -129,16 +117,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/demo/Graph.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="84" column="56" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
-              <folding>
-                <element signature="n#!!block;n#createGraph#0;n#!!block;n#Graph#0" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="42" selection-start-line="42" selection-end-line="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/demo/graph.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -165,11 +150,11 @@
         <option value="$PROJECT_DIR$/src/AdjacentMatrix.kt" />
         <option value="$PROJECT_DIR$/src/graph.txt" />
         <option value="$PROJECT_DIR$/src/demo/AdjacencyList.kt" />
+        <option value="$PROJECT_DIR$/src/demo/graph.txt" />
+        <option value="$PROJECT_DIR$/src/demo/AdjacentMatrix.kt" />
         <option value="$PROJECT_DIR$/src/demo/Vertex.kt" />
         <option value="$PROJECT_DIR$/src/demo/Graph.kt" />
-        <option value="$PROJECT_DIR$/src/demo/AdjacentMatrix.kt" />
         <option value="$PROJECT_DIR$/src/demo/Test.kt" />
-        <option value="$PROJECT_DIR$/src/demo/graph.txt" />
       </list>
     </option>
   </component>
@@ -288,12 +273,12 @@
       <workItem from="1581794096883" duration="26000" />
       <workItem from="1581797217124" duration="4013000" />
       <workItem from="1581808774609" duration="2165000" />
-      <workItem from="1581900458777" duration="12477000" />
+      <workItem from="1581900458777" duration="12841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38766000" />
+    <option name="totallyTimeSpent" value="39130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,7 +311,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3299435" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3299435" />
       <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.28361583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -406,13 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo/AdjacentMatrix.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/demo/Vertex.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -420,27 +398,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/demo/graph.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/demo/Graph.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="84" column="56" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!block;n#createGraph#0;n#!!block;n#Graph#0" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="42" selection-start-line="42" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/demo/AdjacentMatrix.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demo/Test.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/demo/graph.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        <state relative-caret-position="231">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
         </state>
       </provider>
     </entry>
