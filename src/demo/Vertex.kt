@@ -1,12 +1,14 @@
 package demo
 
-class Vertex(var value: Int =-1, var isVisited:Boolean=false) : Comparable<Vertex>{
+/**
+ * @param id uniquely identifies a vertex
+ * @param isVisited marks true is vertex has already been visited
+ * @param weight is the weight of the vertex
+ */
+class Vertex(var id: Int = -1, var isVisited: Boolean = false) {
 
-    override fun compareTo(other: Vertex): Int {
-       return this.value.compareTo(other.value)
+    override fun toString(): String {
+        return this.id.toString() + " " + this.isVisited
     }
 
-    override fun toString():String{
-        return this.value.toString() + " " + this.isVisited
-    }
 }

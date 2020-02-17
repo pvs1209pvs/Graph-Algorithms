@@ -1,9 +1,5 @@
 package demo
 
-import java.io.DataInputStream
-import java.io.File
-import java.io.FileInputStream
-
 var count: Int = 0
 
 // TODO read graph from file
@@ -11,39 +7,47 @@ var count: Int = 0
 fun main() {
 
     val myGraph = AdjacentMatrix(
-        "/home/param/Desktop/Kotlin-Projects/Graph-Algorithms/src/demo/graph.txt")
+        "/home/param/Desktop/Kotlin-Projects/Graph-Algorithms/src/demo/graph.txt"
+    )
 
-    println(myGraph)
+//    myGraph.insetEdge(0,1,2)
+//    myGraph.insetEdge(0,2,4)
+//
+//    myGraph.insetEdge(1,2, 1)
+//    myGraph.insetEdge(1,3, 7)
+//
+//    myGraph.insetEdge(2, 4, 3)
+//
+//    myGraph.insetEdge(3, 5, 1)
+//
+//    myGraph.insetEdge(4, 3, 2)
+//    myGraph.insetEdge(4, 5, 5)
 
-//    val arr:Array<Int> = Array(5){0}
-//    arr[0] = 10
-//    arr[1] = 10
-//    arr[2] = 10
-//    arr[3] = 10
-//    println(arr.contentToString())
-//    exit(0)
-//
-//
-//
-//    //a=0, b=1, c=2, d=3, e=4, f=5, g=6, h=7
-//
-//    myGraph.insetEdge(0, 1)
-//    myGraph.insetEdge(0, 2)
-//
-//    myGraph.insetEdge(1, 3)
-//
-//    // c->f,g
-//    myGraph.insetEdge(2, 3)
-//    myGraph.insetEdge(2, 4)
-//
-//    // e->h
-//    myGraph.insetEdge(3, 5)
-//
-//    println(myGraph)
-//
-//    myGraph.bfs(0, myGraph.vertices)
-//
-//    println(myGraph.vertices)
+    myGraph.insetEdge(0, 1, 4)
+    myGraph.insetEdge(0, 7, 8)
+
+    myGraph.insetEdge(1, 2, 8)
+    myGraph.insetEdge(1, 7, 11)
+
+    myGraph.insetEdge(2, 3, 7)
+    myGraph.insetEdge(2, 5, 4)
+    myGraph.insetEdge(2, 8, 2)
+
+    myGraph.insetEdge(3, 4, 9)
+    myGraph.insetEdge(3, 5, 14)
+
+    myGraph.insetEdge(5, 4, 10)
+
+    myGraph.insetEdge(6, 5, 2)
+
+    myGraph.insetEdge(7, 6, 1)
+    myGraph.insetEdge(7, 8, 7)
+
+    myGraph.insetEdge(8, 6, 6)
+
+    println(myGraph.dijkstra(0).contentToString())
+
+    //println(myGraph)
 
 
 }

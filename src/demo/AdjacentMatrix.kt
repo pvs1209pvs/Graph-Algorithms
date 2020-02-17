@@ -1,14 +1,14 @@
 package demo
 
-import java.io.InputStream
 import java.util.*
+import kotlin.collections.ArrayList
 
-class AdjacentMatrix(input:String) : Graph {
+class AdjacentMatrix(input: String) : Graph {
 
-    private var adjacentMatrix: Array<Array<Int>> = Array(0) { Array(0) { 0 } }
-    private val vertices = LinkedList<Vertex>()
+    private var adjacentMatrix = Array(0) { Array(0) { 0 } }
+    val vertices = LinkedList<Vertex>()
 
-    init{
+    init {
         createGraph(input)
     }
 
@@ -32,43 +32,93 @@ class AdjacentMatrix(input:String) : Graph {
 
         for (k in adjacentMatrix.indices) {
             inDegree += adjacentMatrix[k][sink]
-            outDegree += adjacentMatrix[sink][k]
+            outDegree += adjacentMatrix[k][sink]
         }
 
         return if (inDegree == adjacentMatrix.size - 1 && outDegree == 0) sink
         else -1
 
+
     }
 
-    override fun insetEdge(from: Int, to: Int) {
-        adjacentMatrix[from][to] = 1
+    override fun dijkstra(source: Int): Array<Int> {
+
+        val queue = ArrayList<Vertex>()
+
+        val distance = Array(vertices.size) { Int.MAX_VALUE }
+        val previous = ArrayList<Vertex>()
+
+        for (i in 0 until vertices.size) {
+            queue.add(vertices[i])
+        }
+
+        distance[source] = 0
+
+        while (queue.isNotEmpty()) {
+
+            val u = queue.removeAt(minDistance(queue, distance))
+            val neighbors = LinkedList<Vertex>()
+
+            // neighbors of u
+            for (i in 0 until vertices.size) {
+                if (adjacentMatrix[u.id][i] > 0) {
+                    neighbors.add(vertices[i])
+                }
+            }
+
+            // relaxation
+            for (v in neighbors) {
+                val alt = distance[u.id] + adjacentMatrix[u.id][v.id]
+                if (alt < distance[v.id]) {
+                    distance[v.id] = alt
+                    if (!previous.contains(v))
+                        previous.add(v)
+                }
+            }
+
+        }
+
+        return distance
+
     }
 
-    override fun dfs(startingVertex: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    private fun minDistance(queue: List<Vertex>, distance: Array<Int>): Int {
+
+        var arr: Array<Int> = arrayOf()
+
+        for (v in queue){
+            arr += distance[v.id]
+        }
+
+        return arr.indexOf(arr.min())
+
     }
 
-    override fun bfs(s: Int, vertices: List<Vertex>) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun dfs(s: Int) {
+        TODO("not implemented")
     }
 
-//     fun createGraph(input: String) {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//    }
-
-    override fun initGraph(numV: Int) {
-       for  (i in 0 until numV){
-           vertices.add(Vertex(i))
-           adjacentMatrix = Array(numV) { Array(numV) { 0 } }
-       }
+    override fun bfs(s: Int) {
+        TODO("not implemented")
     }
 
-    override fun toString():String{
+    override fun insetEdge(from: Int, to: Int, weight: Int) {
+        adjacentMatrix[from][to] = weight
+    }
+
+    override fun initGraph(numV: Int, vertexWeights: List<Int>) {
+        for (i in 0 until numV) {
+            vertices.add(Vertex(i))
+            adjacentMatrix = Array(numV) { Array(numV) { 0 } }
+        }
+    }
+
+    override fun toString(): String {
 
         val toString = StringBuilder()
 
-        for (r:Array<Int> in adjacentMatrix){
-            for (c:Int in r){
+        for (r: Array<Int> in adjacentMatrix) {
+            for (c: Int in r) {
                 toString.append("$c ")
             }
             toString.append('\n')
@@ -78,3 +128,5 @@ class AdjacentMatrix(input:String) : Graph {
 
     }
 }
+
+
