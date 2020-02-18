@@ -8,7 +8,7 @@ package demo
 class Vertex(var id: Int = -1, var isVisited: Boolean = false) {
 
     override fun toString(): String {
-        return this.id.toString() + " " + this.isVisited
+        return this.id.toString()
     }
 
 }

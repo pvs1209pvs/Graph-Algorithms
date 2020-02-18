@@ -40,26 +40,26 @@ interface Graph {
 
         initGraph(n, vertexWeights)
 
-        var from = 0
-        var to = -1
-
-        while (inputStreamReader.available() > 0) {
-
-            val read = inputStreamReader.read().toChar()
-
-            if (read == '\n') {
-                from++
-                to = -1
-            }
-
-            if (read == '0') to++
-
-            if (read == '1') {
-                to++
-                insetEdge(from, to, vertexWeights[to])
-            }
-
-        }
+//        var from = 0
+//        var to = -1
+//
+//        while (inputStreamReader.available() > 0) {
+//
+//            val read = inputStreamReader.read().toChar()
+//
+//            if (read == '\n') {
+//                from++
+//                to = -1
+//            }
+//
+//            if (read == '0') to++
+//
+//            if (read == '1') {
+//                to++
+//                insetEdge(from, to, vertexWeights[to])
+//            }
+//
+//        }
 
     }
 
@@ -87,6 +87,8 @@ interface Graph {
      * @return array with distance of every other vertex from the source vertex.
      */
     fun dijkstra(source: Int): Array<Int>
+
+    fun prims(source:Int):Array<Int>
 
 
 }

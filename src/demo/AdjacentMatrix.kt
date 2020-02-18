@@ -2,11 +2,12 @@ package demo
 
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.math.min
 
 class AdjacentMatrix(input: String) : Graph {
 
     private var adjacentMatrix = Array(0) { Array(0) { 0 } }
-    val vertices = LinkedList<Vertex>()
+    private val vertices = LinkedList<Vertex>()
 
     init {
         createGraph(input)
@@ -41,6 +42,54 @@ class AdjacentMatrix(input: String) : Graph {
 
     }
 
+    /* improve with union find */
+    override fun prims(source: Int):Array<Int> {
+
+        val edges = LinkedList<Int>()
+
+        val u = HashSet<Vertex>()
+        val v = HashSet<Vertex>()
+
+        vertices.forEach{v.add(it)}
+
+        if(v.remove(vertices[source])) u.add(vertices[source])
+
+        while(u.size != vertices.size){
+
+            val min: Array<Int> = minEdge(u.toTypedArray())
+
+            if(v.remove(vertices[min[0]])){
+                u.add(vertices[min[0]])
+                edges.add(min[1])
+            }
+
+        }
+
+        return edges.toTypedArray()
+
+    }
+
+
+    private fun minEdge(u : Array<Vertex>):Array<Int>{
+
+        var minIndex = -1
+        var minValue = Int.MAX_VALUE
+
+        for (i in u){
+            for (j in adjacentMatrix[i.id].indices){
+                if(adjacentMatrix[i.id][j] > 0) {
+                    if(adjacentMatrix[i.id][j] < minValue && !u.contains(vertices[j])){
+                        minValue = adjacentMatrix[i.id][j]
+                        minIndex = j
+                    }
+                }
+            }
+        }
+
+        return arrayOf(minIndex, minValue)
+
+    }
+
     override fun dijkstra(source: Int): Array<Int> {
 
         val queue = ArrayList<Vertex>()
@@ -59,14 +108,14 @@ class AdjacentMatrix(input: String) : Graph {
             val u = queue.removeAt(minDistance(queue, distance))
             val neighbors = LinkedList<Vertex>()
 
-            // neighbors of u
+            /* neighbors of u */
             for (i in 0 until vertices.size) {
                 if (adjacentMatrix[u.id][i] > 0) {
                     neighbors.add(vertices[i])
                 }
             }
 
-            // relaxation
+            /* relaxation */
             for (v in neighbors) {
                 val alt = distance[u.id] + adjacentMatrix[u.id][v.id]
                 if (alt < distance[v.id]) {
@@ -85,11 +134,7 @@ class AdjacentMatrix(input: String) : Graph {
     private fun minDistance(queue: List<Vertex>, distance: Array<Int>): Int {
 
         var arr: Array<Int> = arrayOf()
-
-        for (v in queue){
-            arr += distance[v.id]
-        }
-
+        for (v in queue) arr += distance[v.id]
         return arr.indexOf(arr.min())
 
     }
@@ -127,6 +172,7 @@ class AdjacentMatrix(input: String) : Graph {
         return stringForm.toString()
 
     }
+
 }
 
 
