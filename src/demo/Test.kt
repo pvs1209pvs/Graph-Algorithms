@@ -40,6 +40,7 @@ fun main() {
     println(myGraph)
 
     println(myGraph.prims(0).contentToString())
+    //[14, 16, 12, 22, 25, 10]
 
 
 }

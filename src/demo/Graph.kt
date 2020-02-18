@@ -88,6 +88,11 @@ interface Graph {
      */
     fun dijkstra(source: Int): Array<Int>
 
+    /**
+     * Uses Prim's algorithm to find the minimal spanning tree.
+     * @param source starting vertex for the MST.
+     * @return the array of edges that are the part of the MST.
+     */
     fun prims(source:Int):Array<Int>
 
 
