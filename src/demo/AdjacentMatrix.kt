@@ -2,7 +2,6 @@ package demo
 
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.math.min
 
 class AdjacentMatrix(input: String) : Graph {
 
@@ -43,22 +42,22 @@ class AdjacentMatrix(input: String) : Graph {
     }
 
     /* improve with union find */
-    override fun prims(source: Int):Array<Int> {
+    override fun prims(source: Int): Array<Int> {
 
         val edges = LinkedList<Int>()
 
         val u = HashSet<Vertex>()
         val v = HashSet<Vertex>()
 
-        vertices.forEach{v.add(it)}
+        vertices.forEach { v.add(it) }
 
-        if(v.remove(vertices[source])) u.add(vertices[source])
+        if (v.remove(vertices[source])) u.add(vertices[source])
 
-        while(u.size != vertices.size){
+        while (u.size != vertices.size) {
 
             val min: Array<Int> = minEdge(u.toTypedArray())
 
-            if(v.remove(vertices[min[0]])){
+            if (v.remove(vertices[min[0]])) {
                 u.add(vertices[min[0]])
                 edges.add(min[1])
             }
@@ -69,16 +68,15 @@ class AdjacentMatrix(input: String) : Graph {
 
     }
 
-
-    private fun minEdge(u : Array<Vertex>):Array<Int>{
+    private fun minEdge(u: Array<Vertex>): Array<Int> {
 
         var minIndex = -1
         var minValue = Int.MAX_VALUE
 
-        for (i in u){
-            for (j in adjacentMatrix[i.id].indices){
-                if(adjacentMatrix[i.id][j] > 0) {
-                    if(adjacentMatrix[i.id][j] < minValue && !u.contains(vertices[j])){
+        for (i in u) {
+            for (j in adjacentMatrix[i.id].indices) {
+                if (adjacentMatrix[i.id][j] > 0) {
+                    if (adjacentMatrix[i.id][j] < minValue && !u.contains(vertices[j])) {
                         minValue = adjacentMatrix[i.id][j]
                         minIndex = j
                     }
@@ -147,7 +145,43 @@ class AdjacentMatrix(input: String) : Graph {
         TODO("not implemented")
     }
 
-    override fun insetEdge(from: Int, to: Int, weight: Int) {
+    override fun floydWarshall(): Array<Array<Int>> {
+
+        val tempGraph = Array(vertices.size) { Array(vertices.size) { Int.MAX_VALUE } }
+
+        for (i in adjacentMatrix.indices) {
+            for (j in adjacentMatrix[i].indices) {
+                if (adjacentMatrix[i][j] != 0) tempGraph[i][j] = adjacentMatrix[i][j]
+                if (i==j) tempGraph[i][j] = 0
+            }
+        }
+
+        for (i in vertices.indices)
+            floydWarshallVertex(i, tempGraph)
+
+
+
+        return tempGraph
+
+    }
+
+    private fun floydWarshallVertex(v: Int, graph: Array<Array<Int>>) {
+
+        for (i in vertices.indices) {
+            for (j in vertices.indices) {
+                if (!(i == v || j == v || graph[i][v] == Int.MAX_VALUE || graph[v][j] == Int.MAX_VALUE)) {
+                    val temp = graph[i][v] + graph[v][j]
+                    if (temp < graph[i][j]) {
+                        graph[i][j] = temp
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    override fun insertEdge(from: Int, to: Int, weight: Int) {
         adjacentMatrix[from][to] = weight
     }
 

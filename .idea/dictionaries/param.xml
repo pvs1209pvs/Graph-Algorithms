@@ -2,6 +2,7 @@
   <dictionary name="param">
     <words>
       <w>prims</w>
+      <w>warshall</w>
     </words>
   </dictionary>
 </component>

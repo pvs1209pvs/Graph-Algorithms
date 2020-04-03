@@ -80,11 +80,14 @@ class AdjacencyList(input: String) : Graph {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun insetEdge(from: Int, to: Int, weight:Int) {
+    override fun floydWarshall(): Array<Array<Int>> {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun insertEdge(from: Int, to: Int, weight:Int) {
         adjacencyList[from].add(vertices[to])
         weightedEdges[from].add(weight)
     }
-
 
     override fun initGraph(numV: Int, wV: List<Int>) {
         for (i in 0 until numV) {

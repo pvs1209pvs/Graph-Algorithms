@@ -11,7 +11,7 @@ interface Graph {
      * @param from is the source vertex
      * @param to is the destination vertex
      */
-    fun insetEdge(from: Int, to: Int, weight: Int = 0)
+    fun insertEdge(from: Int, to: Int, weight: Int = 0)
 
     /**
      * Initializes the graph and the vertices.
@@ -33,7 +33,7 @@ interface Graph {
 
         inputStreamReader.read()
 
-        for (i in 0 until 5) {
+        for (i in 0 until n) {
             vertexWeights.add(inputStreamReader.read().toChar().toString().toInt())
             inputStreamReader.read()
         }
@@ -95,5 +95,6 @@ interface Graph {
      */
     fun prims(source:Int):Array<Int>
 
+    fun floydWarshall():Array<Array<Int>>
 
 }
