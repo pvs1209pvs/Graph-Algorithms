@@ -2,7 +2,8 @@
 
 - Depth First Search
 - Breath First Search
-- Sink Finder
-- Dijkstra
-- Prims
+- Dijkstra's Algorithm
+- Floyd Warshall's Algorithm
+- Prims' Algorithm
 - Cycle Finder
+- Sink Finder
